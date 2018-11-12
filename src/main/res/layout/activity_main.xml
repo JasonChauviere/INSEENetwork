@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controller.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/activity_main_code_postal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/layout1"
+            android:hint="Saisir le code INSEE souhaité"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="5" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutbonus1"
+        android:layout_below="@id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/activity_main_T2_2015"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T2 2015" />
+
+        <Button
+            android:id="@+id/activity_main_T3_2015"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="T3 2015" />
+
+        <Button
+            android:id="@+id/activity_main_T4_2015"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="T4 2015" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutbonus2"
+        android:layout_below="@id/layoutbonus1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/activity_main_T1_2016"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="T1 2016" />
+
+        <Button
+            android:id="@+id/activity_main_T2_2016"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T2 2016" />
+
+        <Button
+            android:id="@+id/activity_main_T3_2016"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="T3 2016" />
+
+        <Button
+            android:id="@+id/activity_main_T4_2016"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="T4 2016" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutbonus3"
+        android:layout_below="@id/layoutbonus2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/activity_main_T1_2017"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="T1 2017" />
+
+        <Button
+            android:id="@+id/activity_main_T2_2017"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T2 2017" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_below="@id/layoutbonus3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_nom_commune"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOM COMMUNE : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_nom_commune"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text=""
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_below="@id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_departement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DÉPARTEMENT : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_departement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text=""
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_below="@id/layout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_nb_locaux"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOMBRE DE LOCAUX : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_nb_locaux"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout10"
+        android:layout_below="@id/layout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_tt_eligibles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ÉLIGIBLES TOUTES TECHNOLOGIES : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_tt_eligibles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout11"
+        android:layout_below="@id/layout10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_tt_3m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 3 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_tt_3m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout12"
+        android:layout_below="@id/layout11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_tt_8m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 8 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_tt_8m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout13"
+        android:layout_below="@id/layout12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_tt_30m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 30 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_tt_30m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout14"
+        android:layout_below="@id/layout13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_tt_100m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 100 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_tt_100m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout15"
+        android:layout_below="@id/layout14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_dsl_eligibles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ÉLIGIBLES DSL : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_dsl_eligibles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout16"
+        android:layout_below="@id/layout15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_dsl_3m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 3 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_dsl_3m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout17"
+        android:layout_below="@id/layout16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_dsl_8m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 8 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_dsl_8m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout18"
+        android:layout_below="@id/layout17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_dsl_30m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 30 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_dsl_30m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout19"
+        android:layout_below="@id/layout18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_dsl_100m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 100 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_dsl_100m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout20"
+        android:layout_below="@id/layout19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_cab_eligibles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ÉLIGIBLES CABLE : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_cab_eligibles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout21"
+        android:layout_below="@id/layout20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_cab_3m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 3 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_cab_3m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout22"
+        android:layout_below="@id/layout21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_cab_8m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 8 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_cab_8m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout23"
+        android:layout_below="@id/layout22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_cab_30m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 30 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_cab_30m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout24"
+        android:layout_below="@id/layout23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_cab_100m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 100 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_cab_100m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout5"
+        android:layout_below="@id/layout24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_ftth_eligibles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ÉLIGIBLES FFTH : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_ftth_eligibles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout6"
+        android:layout_below="@id/layout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_ftth_3m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 3 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_ftth_3m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout7"
+        android:layout_below="@id/layout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_ftth_8m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 8 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_ftth_8m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout8"
+        android:layout_below="@id/layout7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_ftth_30m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 30 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_ftth_30m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout9"
+        android:layout_below="@id/layout8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/activity_main_text_part_locaux_ftth_100m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  - dont 100 Mo/s et plus : "
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/activity_main_part_locaux_ftth_100m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+</ScrollView>
